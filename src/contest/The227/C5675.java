@@ -8,6 +8,7 @@ import java.util.Arrays;
  * Created by chenz at 11:33 on 2021/2/7
  */
 public class C5675 {
+    //超时还需要 优化 剪枝
     int result = Integer.MAX_VALUE;
     public int minAbsDifference(int[] nums, int goal) {
         int i=0;

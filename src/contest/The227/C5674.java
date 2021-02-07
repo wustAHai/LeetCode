@@ -5,7 +5,7 @@ import org.junit.Test;
 /**
  * Created by chenz at 11:10 on 2021/2/7
  */
-public class L5674 {
+public class C5674 {
     public String largestMerge(String word1, String word2) {
         StringBuilder stringBuilder = new StringBuilder();
         int l1 =word1.length();
