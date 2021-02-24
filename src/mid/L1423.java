@@ -7,16 +7,16 @@ import org.junit.Test;
  */
 public class L1423 {
     public int maxScore(int[] cardPoints, int k) {
-        int sum=0;
+        int sum = 0;
         for (int i = 0; i < k; i++) {
-            sum+=cardPoints[i];
+            sum += cardPoints[i];
         }
-        int max=sum;
-        int q=cardPoints.length;
-        while (k>0){
-            sum-=cardPoints[--k];
-            sum+=cardPoints[--q];
-            max=max>sum?max:sum;
+        int max = sum;
+        int q = cardPoints.length;
+        while (k > 0) {
+            sum -= cardPoints[--k];
+            sum += cardPoints[--q];
+            max = max > sum ? max : sum;
         }
         return max;
     }

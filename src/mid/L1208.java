@@ -6,21 +6,21 @@ package mid;
 public class L1208 {
     public int equalSubstring(String s, String t, int maxCost) {
         int n = s.length();
-        int [] arr = new int[n];
+        int[] arr = new int[n];
         for (int i = 0; i < n; i++) {
-            arr[i]=Math.abs(s.charAt(i)-t.charAt(i));
+            arr[i] = Math.abs(s.charAt(i) - t.charAt(i));
         }
-        int p=0;
-        int q=0;
-        int sum=0;
-        while (q<n){
-            sum+=arr[q];
-            if (sum>maxCost){
-                sum-=arr[p];
+        int p = 0;
+        int q = 0;
+        int sum = 0;
+        while (q < n) {
+            sum += arr[q];
+            if (sum > maxCost) {
+                sum -= arr[p];
                 p++;
             }
             q++;
         }
-        return q-p;
+        return q - p;
     }
 }

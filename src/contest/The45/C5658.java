@@ -10,11 +10,11 @@ public class C5658 {
         int max = nums[0];
         int min = nums[0];
         for (int i = 1; i < nums.length; i++) {
-            preMax = Math.max(preMax+nums[i],nums[i]);
-            max = Math.max(max,preMax);
-            preMin = Math.min(preMin+nums[i],nums[i]);
-            min = Math.min(preMin,min);
+            preMax = Math.max(preMax + nums[i], nums[i]);
+            max = Math.max(max, preMax);
+            preMin = Math.min(preMin + nums[i], nums[i]);
+            min = Math.min(preMin, min);
         }
-        return Math.max(Math.abs(max),Math.abs(min));
+        return Math.max(Math.abs(max), Math.abs(min));
     }
 }

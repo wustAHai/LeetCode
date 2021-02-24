@@ -12,14 +12,14 @@ public class C5657 {
         Map<Integer, Integer> integerMap = new HashMap<>();
         for (int i :
                 nums) {
-            integerMap.put(i,integerMap.getOrDefault(i,0)+1);
+            integerMap.put(i, integerMap.getOrDefault(i, 0) + 1);
         }
         Set<Integer> set = integerMap.keySet();
-        int sum=0;
+        int sum = 0;
         for (Integer i :
                 set) {
-            if (integerMap.get(i)==1){
-                sum+=i;
+            if (integerMap.get(i) == 1) {
+                sum += i;
             }
         }
         return sum;

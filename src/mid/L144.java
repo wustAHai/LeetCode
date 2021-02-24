@@ -11,14 +11,14 @@ import java.util.List;
 public class L144 {
     public List<Integer> preorderTraversal(TreeNode root) {
         List<Integer> list = new ArrayList<>();
-        preorder(root,list);
+        preorder(root, list);
         return list;
     }
 
     private void preorder(TreeNode root, List<Integer> list) {
-        if(root==null ) return;
+        if (root == null) return;
         list.add(root.val);
-        preorder(root.left,list);
-        preorder(root.right,list);
+        preorder(root.left, list);
+        preorder(root.right, list);
     }
 }

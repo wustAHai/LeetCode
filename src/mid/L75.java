@@ -5,10 +5,10 @@ package mid;
  */
 public class L75 {
     public void sortColors(int[] nums) {
-        int red=0;
-        int white=0;
+        int red = 0;
+        int white = 0;
         for (int i = 0; i < nums.length; i++) {
-            switch (nums[i]){
+            switch (nums[i]) {
                 case 0:
                     ++red;
                     break;
@@ -20,13 +20,13 @@ public class L75 {
             }
         }
         for (int i = 0; i < red; i++) {
-            nums[i]=0;
+            nums[i] = 0;
         }
-        for (int i = red; i < red+white ; i++) {
-            nums[i]=1;
+        for (int i = red; i < red + white; i++) {
+            nums[i] = 1;
         }
-        for (int i = red+white; i < nums.length ; i++) {
-            nums[i]=2;
+        for (int i = red + white; i < nums.length; i++) {
+            nums[i] = 2;
         }
     }
 }

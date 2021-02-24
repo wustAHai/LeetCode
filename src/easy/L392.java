@@ -5,20 +5,20 @@ package easy;
  */
 public class L392 {
     public boolean isSubsequence(String s, String t) {
-        if(s.length()>t.length()){
-            return  false;
+        if (s.length() > t.length()) {
+            return false;
         }
-        int j=0;
+        int j = 0;
         for (int i = 0; i < s.length(); i++) {
-            while (j<t.length()){
-                if (t.charAt(j)!=s.charAt(i)){
+            while (j < t.length()) {
+                if (t.charAt(j) != s.charAt(i)) {
                     j++;
-                }else {
+                } else {
                     j++;
                     break;
                 }
             }
-            if(j>=t.length()){
+            if (j >= t.length()) {
                 return false;
             }
         }

@@ -5,15 +5,15 @@ package inter;
  */
 public class T1 {
     public int bitwiseComplement(int N) {
-        if(N==0){
+        if (N == 0) {
             return 1;
         }
-        int ans=0;
-        int i=1;
-        while (N>0){
-            ans+=(1-N%2)*i;
-            N/=2;
-            i*=2;
+        int ans = 0;
+        int i = 1;
+        while (N > 0) {
+            ans += (1 - N % 2) * i;
+            N /= 2;
+            i *= 2;
         }
         return ans;
     }

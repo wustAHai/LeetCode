@@ -8,17 +8,17 @@ import java.util.Arrays;
 public class JZ53A {
     public int search(int[] nums, int target) {
         int index = Arrays.binarySearch(nums, target);
-        if (index<0){
+        if (index < 0) {
             return 0;
         }
-        int p=index;
-        int q=index;
-        while (p>=0&&nums[p]==target){
+        int p = index;
+        int q = index;
+        while (p >= 0 && nums[p] == target) {
             p--;
         }
-        while (q<nums.length&&nums[q]==target){
+        while (q < nums.length && nums[q] == target) {
             q++;
         }
-        return q-p-1;
+        return q - p - 1;
     }
 }

@@ -8,7 +8,7 @@ import java.util.Queue;
  */
 public class C5678 {
     public int minimumSize(int[] nums, int maxOperations) {
-        Queue<Integer> pQueue = new PriorityQueue<>((a,b)->b-a);
+        Queue<Integer> pQueue = new PriorityQueue<>((a, b) -> b - a);
         return 0;
     }
 }

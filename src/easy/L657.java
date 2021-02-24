@@ -5,20 +5,20 @@ package easy;
  */
 public class L657 {
     public boolean judgeCircle(String moves) {
-        int r,l,u,d;
-        r=l=u=d=0;
+        int r, l, u, d;
+        r = l = u = d = 0;
         for (int i = 0; i < moves.length(); i++) {
-            if (moves.charAt(i)=='R'){
+            if (moves.charAt(i) == 'R') {
                 r++;
-            }else if (moves.charAt(i)=='L'){
+            } else if (moves.charAt(i) == 'L') {
                 l++;
-            }else if (moves.charAt(i)=='U'){
+            } else if (moves.charAt(i) == 'U') {
                 u++;
-            }else {
+            } else {
                 d++;
             }
         }
-        if (r==l&&u==d){
+        if (r == l && u == d) {
             return true;
         }
         return false;

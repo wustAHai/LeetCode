@@ -5,14 +5,14 @@ package easy;
  */
 public class L258 {
     public int addDigits(int num) {
-        while (num>10){
-            int temp=num;
-            int sum=0;
-            while (temp>0){
-                sum+=temp%10;
-                temp/=10;
+        while (num > 10) {
+            int temp = num;
+            int sum = 0;
+            while (temp > 0) {
+                sum += temp % 10;
+                temp /= 10;
             }
-            num=sum;
+            num = sum;
         }
         return num;
     }

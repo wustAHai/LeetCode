@@ -10,25 +10,25 @@ public class L463 {
         int circle = 0;
         for (int i = 0; i < row; i++) {
             for (int j = 0; j < col; j++) {
-                if(grid[i][j]==1){
-                    if(i+1==row){
+                if (grid[i][j] == 1) {
+                    if (i + 1 == row) {
                         circle++;
-                    }else if(grid[i+1][j]==0) {
-                        circle++;
-                    }
-                    if (i==0){
-                        circle++;
-                    }else if(grid[i-1][j]==0){
+                    } else if (grid[i + 1][j] == 0) {
                         circle++;
                     }
-                    if (j+1==col){
+                    if (i == 0) {
                         circle++;
-                    }else if (grid[i][j+1]==0){
+                    } else if (grid[i - 1][j] == 0) {
                         circle++;
                     }
-                    if (j==0){
+                    if (j + 1 == col) {
                         circle++;
-                    }else if (grid[i][j-1]==0){
+                    } else if (grid[i][j + 1] == 0) {
+                        circle++;
+                    }
+                    if (j == 0) {
+                        circle++;
+                    } else if (grid[i][j - 1] == 0) {
                         circle++;
                     }
                 }

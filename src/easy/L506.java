@@ -10,26 +10,26 @@ import java.util.TreeMap;
 public class L506 {
     public String[] findRelativeRanks(int[] nums) {
         String[] strings = new String[nums.length];
-        int [] nums2 = Arrays.copyOf(nums, nums.length);
+        int[] nums2 = Arrays.copyOf(nums, nums.length);
         Arrays.sort(nums2);
         HashMap<Integer, Integer> hashMap = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
-            hashMap.put(nums2[i],nums.length-i);
+            hashMap.put(nums2[i], nums.length - i);
         }
         for (int i = 0; i < nums.length; i++) {
             int index = hashMap.get(nums[i]);
-            switch (index){
+            switch (index) {
                 case 1:
-                    strings[i]="Gold Medal";
+                    strings[i] = "Gold Medal";
                     break;
                 case 2:
-                    strings[i]="Silver Medal";
+                    strings[i] = "Silver Medal";
                     break;
                 case 3:
-                    strings[i]="Bronze Medal";
+                    strings[i] = "Bronze Medal";
                     break;
                 default:
-                    strings[i]=""+index;
+                    strings[i] = "" + index;
                     break;
             }
         }

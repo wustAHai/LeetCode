@@ -5,12 +5,12 @@ package easy;
  */
 public class JZ50 {
     public char firstUniqChar(String s) {
-        int [] counts = new int[26];
+        int[] counts = new int[26];
         for (int i = 0; i < s.length(); i++) {
-            counts[s.charAt(i)-'a']++;
+            counts[s.charAt(i) - 'a']++;
         }
         for (int i = 0; i < s.length(); i++) {
-            if (counts[s.charAt(i)-'a']==1){
+            if (counts[s.charAt(i) - 'a'] == 1) {
                 return s.charAt(i);
             }
         }

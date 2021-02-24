@@ -8,9 +8,9 @@ public class JZ42 {
         int max = nums[0];
         int preMax = nums[0];
         for (int i = 1; i < nums.length; i++) {
-            preMax=Math.max(nums[i],nums[i]+preMax);
-            max=Math.max(max,preMax);
+            preMax = Math.max(nums[i], nums[i] + preMax);
+            max = Math.max(max, preMax);
         }
-        return  max;
+        return max;
     }
 }

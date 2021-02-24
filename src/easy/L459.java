@@ -6,30 +6,30 @@ package easy;
 public class L459 {
     public boolean repeatedSubstringPattern(String s) {
         int length = s.length();
-        if (length<2){
-            return  false;
+        if (length < 2) {
+            return false;
         }
-        for (int i = 1; i <= length/2 ; i++) {
-            String temp = s.substring(0,i);
-            if (isPattern(s,temp)){
-                return  true;
+        for (int i = 1; i <= length / 2; i++) {
+            String temp = s.substring(0, i);
+            if (isPattern(s, temp)) {
+                return true;
             }
         }
-        return  false;
+        return false;
     }
 
-    public boolean isPattern(String s,String temp){
-        int  sLength = s.length();
-        int  tempLength = temp.length();
-        if(sLength%tempLength!=0){
-            return  false;
+    public boolean isPattern(String s, String temp) {
+        int sLength = s.length();
+        int tempLength = temp.length();
+        if (sLength % tempLength != 0) {
+            return false;
         }
-        int  n = s.length()/tempLength;
+        int n = s.length() / tempLength;
         for (int i = 0; i < n; i++) {
-            if(!s.substring(i*tempLength,(i+1)*tempLength).equals(temp)){
+            if (!s.substring(i * tempLength, (i + 1) * tempLength).equals(temp)) {
                 return false;
             }
         }
-        return  true;
+        return true;
     }
 }

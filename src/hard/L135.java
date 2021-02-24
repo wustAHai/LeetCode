@@ -52,10 +52,10 @@ public class L135 {
                             break;
                         }
                     }
-                    if(asc+dsc==arrayList.size()-2){
+                    if (asc + dsc == arrayList.size() - 2) {
                         sum += (asc + 1) * asc / 2 + (dsc + 1) * dsc / 2 + arrayList.size() * 2;
-                    }else{
-                        sum += (asc + 1) * asc / 2 + (dsc + 1) * dsc / 2 + arrayList.size() * 2-Math.min(asc,dsc);
+                    } else {
+                        sum += (asc + 1) * asc / 2 + (dsc + 1) * dsc / 2 + arrayList.size() * 2 - Math.min(asc, dsc);
                     }
                     arrayList.clear();
                 }
@@ -80,19 +80,20 @@ public class L135 {
                     break;
                 }
             }
-            if(asc+dsc==arrayList.size()-2){
+            if (asc + dsc == arrayList.size() - 2) {
                 sum += (asc + 1) * asc / 2 + (dsc + 1) * dsc / 2 + arrayList.size() * 2;
-            }else{
-                sum += (asc + 1) * asc / 2 + (dsc + 1) * dsc / 2 + arrayList.size() * 2-Math.min(asc,dsc);
+            } else {
+                sum += (asc + 1) * asc / 2 + (dsc + 1) * dsc / 2 + arrayList.size() * 2 - Math.min(asc, dsc);
             }
             arrayList.clear();
         }
 
         return sum;
     }
+
     @Test
-    public  void  test(){
-        int [] arr ={1,2,3,3,3,2,1};
+    public void test() {
+        int[] arr = {1, 2, 3, 3, 3, 2, 1};
         System.out.println(candy(arr));
     }
 

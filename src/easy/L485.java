@@ -5,14 +5,14 @@ package easy;
  */
 public class L485 {
     public int findMaxConsecutiveOnes(int[] nums) {
-        int max =0;
-        int temp=0;
+        int max = 0;
+        int temp = 0;
         for (int i = 0; i < nums.length; i++) {
-            if (nums[i]==0){
-                temp=0;
-            }else {
+            if (nums[i] == 0) {
+                temp = 0;
+            } else {
                 temp++;
-                max=temp>max?temp:max;
+                max = temp > max ? temp : max;
             }
         }
         return max;

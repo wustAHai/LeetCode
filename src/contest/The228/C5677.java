@@ -9,23 +9,23 @@ import java.util.Set;
  */
 public class C5677 {
     public int countHomogenous(String s) {
-        char[] chars =s.toCharArray();
+        char[] chars = s.toCharArray();
         Map<Long, Long> map = new HashMap<>();
-        int p=0;
-        int  q=0;
-        while (q<s.length()){
-            while (q<s.length()&&chars[p]==chars[q]){
+        int p = 0;
+        int q = 0;
+        while (q < s.length()) {
+            while (q < s.length() && chars[p] == chars[q]) {
                 q++;
             }
-            map.put((long)q-p,map.getOrDefault((long)q-p,0l)+1);
-            p=q;
+            map.put((long) q - p, map.getOrDefault((long) q - p, 0l) + 1);
+            p = q;
         }
-        long ans=0;
+        long ans = 0;
         Set<Long> set = map.keySet();
         for (Long i :
                 set) {
-            ans+= (i+1)*i/2*map.get(i);
+            ans += (i + 1) * i / 2 * map.get(i);
         }
-        return (int)(ans%1000000007);
+        return (int) (ans % 1000000007);
     }
 }

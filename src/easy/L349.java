@@ -13,17 +13,17 @@ public class L349 {
         }
         Set<Integer> set2 = new TreeSet<>();
         for (int i = 0; i < nums2.length; i++) {
-            if(set.contains(nums2[i])){
+            if (set.contains(nums2[i])) {
                 set2.add(nums2[i]);
             }
         }
-        int [] a= new int[set2.size()];
-        int i=0;
+        int[] a = new int[set2.size()];
+        int i = 0;
         Iterator<Integer> iterator = set2.iterator();
-        while (iterator.hasNext()){
+        while (iterator.hasNext()) {
             a[i] = iterator.next();
             i++;
         }
-        return  a;
+        return a;
     }
 }

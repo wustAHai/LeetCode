@@ -9,17 +9,17 @@ import java.util.Queue;
  */
 public class JZ40 {
     public int[] getLeastNumbers(int[] arr, int k) {
-        Queue<Integer> queue = new PriorityQueue<>((a,b)->b-a);
+        Queue<Integer> queue = new PriorityQueue<>((a, b) -> b - a);
         for (int i :
                 arr) {
             queue.offer(i);
-            if (queue.size()>0){
+            if (queue.size() > 0) {
                 queue.poll();
             }
         }
-        int []ans =new int[k];
+        int[] ans = new int[k];
         for (int i = 0; i < k; i++) {
-            ans[i]=queue.poll();
+            ans[i] = queue.poll();
         }
         return ans;
     }

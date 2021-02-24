@@ -16,31 +16,32 @@ public class C5659 {
             deque.addLast(s.charAt(i));
         }
 
-        while (deque.size()>1){
-            if (!deque.peekFirst().equals(deque.peekLast())){
+        while (deque.size() > 1) {
+            if (!deque.peekFirst().equals(deque.peekLast())) {
                 break;
             }
             Character character = deque.peek();
-            while (!deque.isEmpty()){
-                if (deque.peekFirst().equals(character)){
+            while (!deque.isEmpty()) {
+                if (deque.peekFirst().equals(character)) {
                     deque.removeFirst();
-                }else {
+                } else {
                     break;
                 }
             }
-            while (!deque.isEmpty()){
-                if (deque.peekLast().equals(character)){
+            while (!deque.isEmpty()) {
+                if (deque.peekLast().equals(character)) {
                     deque.removeLast();
-                }else {
+                } else {
                     break;
                 }
             }
             //System.out.println(deque);
         }
-        return  deque.size();
+        return deque.size();
     }
+
     @Test
-    public void test(){
+    public void test() {
         System.out.println(minimumLength("aabccabba"));
     }
 }

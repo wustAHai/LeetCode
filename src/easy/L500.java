@@ -7,31 +7,31 @@ import java.util.ArrayList;
  */
 public class L500 {
     public String[] findWords(String[] words) {
-        String[] arr= {"qwertyuiop","asdfghjkl","zxcvbnm"};
+        String[] arr = {"qwertyuiop", "asdfghjkl", "zxcvbnm"};
         ArrayList<String> arrayList = new ArrayList<>();
         for (int i = 0; i < words.length; i++) {
-            int status=0;
+            int status = 0;
             boolean flag = true;
             for (int j = 0; j < words[i].length(); j++) {
                 char ch = Character.toLowerCase(words[i].charAt(j));
-                if (j==0){
+                if (j == 0) {
                     for (int k = 0; k < arr.length; k++) {
-                        if (arr[k].indexOf(ch)>=0){
-                            status=k;
+                        if (arr[k].indexOf(ch) >= 0) {
+                            status = k;
                             break;
                         }
                     }
-                }else {
-                    if (arr[status].indexOf(ch)<0){
-                        flag= false;
+                } else {
+                    if (arr[status].indexOf(ch) < 0) {
+                        flag = false;
                         break;
                     }
                 }
             }
-            if (flag){
+            if (flag) {
                 arrayList.add(words[i]);
             }
         }
-        return  arrayList.toArray(new String[0]);
+        return arrayList.toArray(new String[0]);
     }
 }

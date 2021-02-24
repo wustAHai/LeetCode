@@ -13,6 +13,6 @@ public class L575 {
         for (int i = 0; i < n; i++) {
             integers.add(candyType[i]);
         }
-        return n/2<integers.size() ? n/2:integers.size();
+        return n / 2 < integers.size() ? n / 2 : integers.size();
     }
 }

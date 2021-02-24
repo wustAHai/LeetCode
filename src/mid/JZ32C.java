@@ -14,28 +14,28 @@ public class JZ32C {
     public List<List<Integer>> levelOrder(TreeNode root) {
         List<List<Integer>> list = new ArrayList<>();
         Deque<TreeNode> deque = new LinkedList<>();
-        if (root!=null){
+        if (root != null) {
             deque.addLast(root);
         }
         int n;
-        boolean left=true;
-        while ((n=deque.size())>0){
+        boolean left = true;
+        while ((n = deque.size()) > 0) {
             List<Integer> level = new ArrayList<>();
             for (int i = 0; i < n; i++) {
                 TreeNode treeNode = deque.removeFirst();
-                if (left){
+                if (left) {
                     level.add(treeNode.val);
-                }else{
+                } else {
                     level.add(0, treeNode.val);
                 }
-                if (treeNode.left!=null){
+                if (treeNode.left != null) {
                     deque.addLast(treeNode.left);
                 }
-                if (treeNode.right!=null){
+                if (treeNode.right != null) {
                     deque.addLast(treeNode.right);
                 }
             }
-            left=!left;
+            left = !left;
             list.add(level);
         }
         return list;

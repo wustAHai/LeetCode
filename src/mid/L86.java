@@ -11,18 +11,18 @@ public class L86 {
         ListNode dummyNode1 = new ListNode();
         ListNode res = dummyNode;
         ListNode res1 = dummyNode1;
-        while (head!=null){
-            if(head.val<x){
-                dummyNode.next=head;
-                dummyNode=dummyNode.next;
-            }else {
-                dummyNode1.next=head;
-                dummyNode1=dummyNode1.next;
+        while (head != null) {
+            if (head.val < x) {
+                dummyNode.next = head;
+                dummyNode = dummyNode.next;
+            } else {
+                dummyNode1.next = head;
+                dummyNode1 = dummyNode1.next;
             }
-            head=head.next;
+            head = head.next;
         }
-        dummyNode1.next=null;
-        dummyNode.next=res1.next;
+        dummyNode1.next = null;
+        dummyNode.next = res1.next;
         return res.next;
     }
 }

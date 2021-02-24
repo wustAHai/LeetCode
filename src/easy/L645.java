@@ -10,16 +10,16 @@ import java.util.Set;
 public class L645 {
     public int[] findErrorNums(int[] nums) {
         Set<Integer> integers = new HashSet<>();
-        int k=0;
+        int k = 0;
         for (int i = 0; i < nums.length; i++) {
-            if (integers.contains(nums[i])){
-                k=nums[i];
+            if (integers.contains(nums[i])) {
+                k = nums[i];
                 break;
-            }else{
+            } else {
                 integers.add(nums[i]);
             }
         }
-        int miss = (1+nums.length)*nums.length/2 + k - Arrays.stream(nums).sum();
-        return  new int[]{k,miss};
+        int miss = (1 + nums.length) * nums.length / 2 + k - Arrays.stream(nums).sum();
+        return new int[]{k, miss};
     }
 }

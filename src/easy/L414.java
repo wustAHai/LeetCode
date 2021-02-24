@@ -5,11 +5,11 @@ package easy;
  */
 public class L414 {
     public int arrangeCoins(int n) {
-        int k=0;
-        long sum=(k+1)*k/2;
-        while (sum<=n){
+        int k = 0;
+        long sum = (k + 1) * k / 2;
+        while (sum <= n) {
             k++;
-            sum=(k+1)*k/2;
+            sum = (k + 1) * k / 2;
         }
         return --k;
     }

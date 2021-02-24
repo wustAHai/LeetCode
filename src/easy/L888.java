@@ -7,16 +7,16 @@ import java.util.Arrays;
  */
 public class L888 {
     public int[] fairCandySwap(int[] A, int[] B) {
-        int a  = Arrays.stream(A).sum();
-        int b  = Arrays.stream(B).sum();
-        int diff = b-a;
+        int a = Arrays.stream(A).sum();
+        int b = Arrays.stream(B).sum();
+        int diff = b - a;
         for (int i = 0; i < A.length; i++) {
             for (int j = 0; j < B.length; j++) {
-                if((B[j]-A[i])<<1==diff){
-                    return new int[]{A[i],B[j]};
+                if ((B[j] - A[i]) << 1 == diff) {
+                    return new int[]{A[i], B[j]};
                 }
             }
         }
-        return new int[]{0,0};
+        return new int[]{0, 0};
     }
 }

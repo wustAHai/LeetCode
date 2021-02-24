@@ -14,24 +14,24 @@ public class L71 {
     public String simplifyPath(String path) {
         StringBuilder stringBuilder = new StringBuilder();
         Deque<String> strings = new LinkedList<>();
-        String[]paths = path.split("/");
+        String[] paths = path.split("/");
         for (int i = 0; i < paths.length; i++) {
-            if("".equals(paths[i])||".".equals(paths[i])){
+            if ("".equals(paths[i]) || ".".equals(paths[i])) {
                 continue;
             }
-            if("..".equals(paths[i])){
-                if(strings.size()>0){
+            if ("..".equals(paths[i])) {
+                if (strings.size() > 0) {
                     strings.removeLast();
                 }
-            }else {
+            } else {
                 strings.add(paths[i]);
             }
         }
-        while (strings.size()>0){
+        while (strings.size() > 0) {
             stringBuilder.append("/");
             stringBuilder.append(strings.removeFirst());
         }
-        if (stringBuilder.length()==0){
+        if (stringBuilder.length() == 0) {
             stringBuilder.append("/");
         }
         return stringBuilder.toString();

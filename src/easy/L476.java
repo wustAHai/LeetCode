@@ -8,11 +8,11 @@ import org.junit.Test;
 public class L476 {
     public int findComplement(int num) {
         int temp = 1;
-        int i=1;
-        while (temp<num){
-            i*=2;
-            temp+=i;
+        int i = 1;
+        while (temp < num) {
+            i *= 2;
+            temp += i;
         }
-        return temp-num;
+        return temp - num;
     }
 }

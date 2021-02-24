@@ -10,25 +10,25 @@ public class L39 {
         List<List<Integer>> result = new ArrayList<>();
         List<Integer> temp = new ArrayList<>();
         Arrays.sort(candidates);
-        dfs(candidates,0,target,temp,result);
+        dfs(candidates, 0, target, temp, result);
         Set<List<Integer>> resultSet = new HashSet<>(result);
-        return  new ArrayList<>(resultSet);
+        return new ArrayList<>(resultSet);
     }
 
     private void dfs(int[] candidates, int i, int target, List<Integer> temp, List<List<Integer>> result) {
-        if (target==0&&!result.contains(temp)){
+        if (target == 0 && !result.contains(temp)) {
             result.add(new ArrayList<>(temp));
         }
-        if (i>=candidates.length){
+        if (i >= candidates.length) {
             return;
         }
-        if (target<candidates[i]){
+        if (target < candidates[i]) {
             return;
         }
-        dfs(candidates,i+1,target,temp,result);
+        dfs(candidates, i + 1, target, temp, result);
 
         temp.add(candidates[i]);
-        dfs(candidates,i+1,target-candidates[i],temp,result);
-        temp.remove(temp.size()-1);
+        dfs(candidates, i + 1, target - candidates[i], temp, result);
+        temp.remove(temp.size() - 1);
     }
 }

@@ -9,18 +9,18 @@ import java.util.List;
 public class L589 {
     public List<Integer> preorder(Node root) {
         List<Integer> list = new ArrayList<>();
-        preorder(root,list);
+        preorder(root, list);
         return list;
     }
 
     private void preorder(Node root, List<Integer> list) {
-        if (root==null){
+        if (root == null) {
             return;
         }
         list.add(root.val);
         for (Node node :
                 root.children) {
-            preorder(node,list);
+            preorder(node, list);
         }
     }
 

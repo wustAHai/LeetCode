@@ -5,15 +5,15 @@ package easy;
  */
 public class JZ05 {
     public String replaceSpace(String s) {
-        if(s==null||s.length()==0){
+        if (s == null || s.length() == 0) {
             return "";
         }
         StringBuilder stringBuilder = new StringBuilder();
         for (int i = 0; i < s.length(); i++) {
             char ch = s.charAt(i);
-            if (ch==' '){
+            if (ch == ' ') {
                 stringBuilder.append("%20");
-            }else {
+            } else {
                 stringBuilder.append(ch);
             }
         }

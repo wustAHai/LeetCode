@@ -9,13 +9,13 @@ import java.util.Arrays;
 public class JZ06 {
     public int[] reversePrint(ListNode head) {//官方题解用栈
         ArrayList<Integer> arrayList = new ArrayList<>();
-        while (head!=null){
+        while (head != null) {
             arrayList.add(head.val);
-            head=head.next;
+            head = head.next;
         }
-        int [] arr = new int[arrayList.size()];
+        int[] arr = new int[arrayList.size()];
         for (int i = 0; i < arr.length; i++) {
-            arr[arr.length-i-1]=arrayList.get(i);
+            arr[arr.length - i - 1] = arrayList.get(i);
         }
         return arr;
     }

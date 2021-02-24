@@ -5,6 +5,6 @@ package easy;
  */
 public class JZ15 {
     public int hammingWeight(int n) {
-        return  Integer.bitCount(n);
+        return Integer.bitCount(n);
     }
 }

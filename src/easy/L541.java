@@ -5,26 +5,26 @@ package easy;
  */
 public class L541 {
     public String reverseStr(String s, int k) {
-        StringBuilder stringBuilder=new StringBuilder();
+        StringBuilder stringBuilder = new StringBuilder();
         boolean reverse = true;
         int length = s.length();
-        int counter =0;
+        int counter = 0;
         StringBuilder temp = new StringBuilder();
         for (int i = 0; i < length; i++) {
             char ch = s.charAt(i);
             counter++;
             temp.append(ch);
-            if (i==length-1||counter==k){
-                if (reverse){
+            if (i == length - 1 || counter == k) {
+                if (reverse) {
                     stringBuilder.append(temp.reverse());
-                }else {
+                } else {
                     stringBuilder.append(temp);
                 }
-                counter=0;
-                reverse=!reverse;
+                counter = 0;
+                reverse = !reverse;
                 temp = new StringBuilder();
             }
         }
-        return  stringBuilder.toString();
+        return stringBuilder.toString();
     }
 }

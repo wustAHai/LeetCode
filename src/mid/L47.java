@@ -17,6 +17,7 @@ public class L47 {
         backtrack(n, output, res, 0);
         return res;
     }
+
     public void backtrack(int n, List<Integer> output, List<List<Integer>> res, int first) {
         // 所有数都填完了
         if (first == n) {
@@ -24,7 +25,7 @@ public class L47 {
         }
         Set<Integer> set = new HashSet<>();
         for (int i = first; i < n; i++) {
-            if(!set.contains(output.get(i))){
+            if (!set.contains(output.get(i))) {
                 // 动态维护数组
                 Collections.swap(output, first, i);
                 // 继续递归填下一个数

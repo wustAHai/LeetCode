@@ -5,11 +5,11 @@ package easy;
  */
 public class L461 {
     public int hammingDistance(int x, int y) {
-        x ^=y;
-        int answer =0;
-        while (x!=0){
-           ++answer;
-           x&=(x-1);
+        x ^= y;
+        int answer = 0;
+        while (x != 0) {
+            ++answer;
+            x &= (x - 1);
         }
         return answer;
     }

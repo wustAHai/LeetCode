@@ -10,6 +10,7 @@ public class JZ09 {
     class CQueue {
         Stack<Integer> a;
         Stack<Integer> b;
+
         public CQueue() {
             a = new Stack<>();
             b = new Stack<>();
@@ -33,11 +34,11 @@ public class JZ09 {
             }
             return res;
             */
-            if (a.isEmpty()&&b.isEmpty()){
+            if (a.isEmpty() && b.isEmpty()) {
                 return -1;
             }
-            if(b.isEmpty()){
-                while (!a.isEmpty()){
+            if (b.isEmpty()) {
+                while (!a.isEmpty()) {
                     b.push(a.pop());
                 }
             }

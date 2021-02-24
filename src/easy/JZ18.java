@@ -5,15 +5,15 @@ package easy;
  */
 public class JZ18 {
     public ListNode deleteNode(ListNode head, int val) {
-        ListNode dummyNode  = new ListNode(0);
-        dummyNode.next=head;
+        ListNode dummyNode = new ListNode(0);
+        dummyNode.next = head;
         ListNode p = dummyNode;
-        while (p.next!=null){
-            if (p.next.val==val){
-                p.next=p.next.next;
+        while (p.next != null) {
+            if (p.next.val == val) {
+                p.next = p.next.next;
                 break;
             }
-            p=p.next;
+            p = p.next;
         }
         return dummyNode.next;
     }

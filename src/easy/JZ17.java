@@ -6,15 +6,15 @@ package easy;
 public class JZ17 {
     public int[] printNumbers(int n) {
         int max = 0;
-        while (n>0){
-            max*=10;
-            max+=9;
+        while (n > 0) {
+            max *= 10;
+            max += 9;
             n--;
         }
-        int [] result = new int[max];
+        int[] result = new int[max];
         for (int i = 0; i < max; i++) {
-            result[i]=i+1;
+            result[i] = i + 1;
         }
-        return  result;
+        return result;
     }
 }
