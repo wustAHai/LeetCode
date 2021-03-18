@@ -36,4 +36,30 @@ public class JZ32A {
         }
         return ans;
     }
+
+    public void preOrder(TreeNode root){
+        if (root==null){
+            return;
+        }
+        System.out.println(root.val);
+        preOrder(root.left);
+        preOrder(root.right);
+    }
+    public void midOrder(TreeNode root){
+        if (root==null){
+            return;
+        }
+        midOrder(root.left);
+        System.out.println(root.val);
+        midOrder(root.right);
+    }
+
+    public void lastOrder(TreeNode root){
+        if (root==null){
+            return;
+        }
+        lastOrder(root.left);
+        lastOrder(root.right);
+        System.out.println(root.val);
+    }
 }
