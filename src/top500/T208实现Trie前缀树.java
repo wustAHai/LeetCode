@@ -59,35 +59,6 @@ class Trie {
         return true;
     }
 }
-class Encrypter {
 
-    private Map<Character,String> kvMap = new HashMap<>();
-    private Map<String,Set<Character>> vkMap = new HashMap<>();
-    private  Trie trie = new Trie();
-
-    public Encrypter(char[] keys, String[] values, String[] dictionary) {
-        for (int i = 0; i < keys.length; i++) {
-            kvMap.put(keys[i],values[i]);
-            Set<Character> orDefault = vkMap.getOrDefault(values[i], new HashSet<>());
-            orDefault.add(keys[i]);
-            vkMap.put(values[i],orDefault);
-        }
-        for (String s : dictionary) {
-            trie.insert(s);
-        }
-    }
-
-    public String encrypt(String word1) {
-        StringBuilder sb  = new StringBuilder();
-        for (int i = 0; i < word1.length(); i++) {
-            sb.append(kvMap.get(word1.charAt(i)));
-        }
-        return sb.toString();
-    }
-
-    public int decrypt(String word2) {
-        return 0;
-    }
-}
 
 
