@@ -1,5 +1,7 @@
 package mid;
 
+import java.util.Arrays;
+import java.util.Map;
 import java.util.TreeMap;
 
 /**
@@ -47,6 +49,10 @@ public class L954 {
                     map.put(i*2,integer-i);
                 }
             }
+        }
+        int[] arr1 =  new int[10];
+        for (Map.Entry<Integer, Integer> integerIntegerEntry : map.entrySet()) {
+
         }
         return true;
     }

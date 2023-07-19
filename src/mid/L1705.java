@@ -1,12 +1,44 @@
 package mid;
 
-import java.util.Comparator;
-import java.util.PriorityQueue;
+import java.util.*;
 
 /**
  * @author chenz at 20:01 on 2021/12/24 .
  */
 public class L1705 {
+    public String[] findLongestSubarray(String[] array) {
+        int sum = 0;
+        int length = 0;
+        int l = -1;
+        Map<Integer,Integer> map = new HashMap<>();
+        map.put(0,-1);
+        for (int i = 0; i < array.length; i++) {
+            if (Character.isDigit(array[i].charAt(0))){
+                sum++;
+            }else {
+                sum--;
+            }
+            if (map.containsKey(sum)){
+                Integer integer = map.get(sum);
+                if (i-integer>length){
+                    length = i-integer;
+                    l=integer;
+                }else if(i-integer == length){
+                    l=Math.min(l,integer);
+                }
+            }else {
+                map.put(sum,i);
+            }
+        }
+       if (length==0){
+           return  new String[0];
+       }
+       String [] arr = new String[length];
+       System.arraycopy(array,l+1,arr,0,length);
+       return arr;
+    }
+
+
     public int eatenApples(int[] apples, int[] days) {
         PriorityQueue<int[]> priorityQueue = new PriorityQueue<>(new Comparator<int[]>() {
             @Override
@@ -86,4 +118,5 @@ public class L1705 {
         }
         return ans;
     }
+
 }

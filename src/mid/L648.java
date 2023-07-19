@@ -26,6 +26,7 @@ public class L648 {
 }
 class DictTree{
     DictTree[] nodes = new DictTree[26];
+    int cnt = 0;
     boolean closed;
 
     void addString(DictTree root,String str){

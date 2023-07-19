@@ -21,6 +21,9 @@ public class Main {
             list.add(map.get(integer));
             ans.add(list);
         }
+        for (Map.Entry<Integer, Integer> integerIntegerEntry : map.entrySet()) {
+
+        }
         return ans;
     }
 
